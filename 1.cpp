@@ -43,3 +43,43 @@ int main()
     cout << "Длина окружности равна: " << L << endl;
 }
  
+//part 3
+
+#include <iostream>
+ 
+using namespace std;
+ 
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    float a, b, c;
+    cout << "Введите первое число: ";
+    cin >> a;
+    cout << "Введите второе число: ";
+    cin >> b;
+    c = (a+b)/2;
+    cout << "Среднее арифметическое равно: " << c << endl;
+}
+
+//part 4
+
+#include <iostream>
+ 
+using namespace std;
+ 
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    float a, b;
+    cout << "Введите первое число: ";
+    cin >> a;
+    a = a * a;
+    cout << "Введите второе число: ";
+    cin >> b;
+    b = b * b;
+    cout << "Сумма равна: " << a + b << endl;
+    cout << "Разность равна: " << a - b << endl;
+    cout << "Произведение равно: " << a * b << endl;
+    cout << "Частное равно: " << a / b << endl;
+    
+}
