@@ -6,20 +6,20 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 	int a, b, S, P;
-	cout << "Введите первое число: ";
+	cout << "Enter a: ";
 	cin >> a;
-	cout << "Введите второе число: ";
+	cout << "Enter b: ";
 	cin >> b;
 	if (a < 0 || b < 0)
 	{
-		cout << "Ошибка! ";
+		cout << "Error! ";
 	}
 	else
 	{
 		S = a * b;
 		P = 2 * (a + b);
-		cout << "Площадь равна: " << S << endl;
-		cout << "Периметр равен: " << P << endl;
+		cout << "S = : " << S << endl;
+		cout << "P = : " << P << endl;
 	}
 	system("pause");
 	return 0;
