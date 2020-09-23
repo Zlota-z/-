@@ -1,11 +1,11 @@
+//part 1
 #include <iostream>
 
 using namespace std;
 
 int main()
 {
-	setlocale(LC_ALL, "Russian");
-	int a, b, S, P;
+	float a, b, S, P;
 	cout << "Enter a: ";
 	cin >> a;
 	cout << "Enter b: ";
@@ -25,3 +25,20 @@ int main()
 	return 0;
 
 }
+
+//part 2
+
+#include <iostream>
+ 
+using namespace std;
+ 
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    float d, L;
+    cout << "Введите диаметр: ";
+    cin >> d;
+    L = d * 3.14;
+    cout << "Длина окружности равна: " << L << endl;
+}
+ 
