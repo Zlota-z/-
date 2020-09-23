@@ -83,3 +83,27 @@ int main()
     cout << "Частное равно: " << a / b << endl;
     
 }
+
+//part 5
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    float a, b;
+    cout << "Введите первое число: ";
+    cin >> a;
+    a = abs(a);
+    cout << "Введите второе число: ";
+    cin >> b;
+    b = abs(b);
+    cout << "Сумма равна: " << a + b << endl;
+    cout << "Разность равна: " << a - b << endl;
+    cout << "Произведение равно: " << a * b << endl;
+    cout << "Частное равно: " << a / b << endl;
+
+}
