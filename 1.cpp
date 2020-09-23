@@ -5,14 +5,15 @@ using namespace std;
 
 int main()
 {
+	setlocale(LC_ALL, "Russian");
 	float a, b, S, P;
-	cout << "Enter a: ";
+	cout << "Введите первое число: ";
 	cin >> a;
-	cout << "Enter b: ";
+	cout << "Введите второе число: ";
 	cin >> b;
 	if (a < 0 || b < 0)
 	{
-		cout << "Error! ";
+		cout << "Ошибка! ";
 	}
 	else
 	{
