@@ -1,0 +1,15 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    double x;
+    cout << "X = ";
+    cin >> x;
+    x = 3 * pow (x, 6) - 6 * x * x - 7;
+    cout << "X = " << x << endl;
+return 0;
+    }
