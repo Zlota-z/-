@@ -1,0 +1,22 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    double a, b, x;
+    cout << "A = ";
+    cin >> a;
+    cout << "B = ";
+    cin >> b;
+    if (a == 0)
+        cout << "Некорректное значение A!" << endl;
+    else
+    {
+        x = -b / a;
+        cout << "x = " << x << endl;
+    }
+    return 0;
+}
