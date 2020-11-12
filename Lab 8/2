@@ -1,0 +1,18 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    int A, B;
+    cout << "A = ";
+    cin >> A;
+    cout << "B = ";
+    cin >> B;
+    A /= B;
+        cout << "Целых отрезков размещено: " << A << endl;
+    system("pause");
+    return 0;
+}
