@@ -1,0 +1,16 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    int x;
+    cout << "K = ";
+    cin >> x;
+    x %= 7;
+    cout << "Номер дня недели: " << x << endl;
+    system("pause");
+    return 0;
+}
