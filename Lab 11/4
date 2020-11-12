@@ -1,0 +1,30 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    double x, y;
+    cout << "Введите координату по оси х: ";
+    cin >> x;
+    cout << "Введите координату по оси y: ";
+    cin >> y;
+    if (x > 0)
+    {
+        if (y > 0)
+            cout << "Первая четверть" << endl;
+        else
+            cout << "Четвертая четверть" << endl;
+    }
+    else
+    {
+        if (y > 0)
+            cout << "Вторая четверть" << endl;
+        else
+            cout << "Третья четверть" << endl;
+    }
+    system("pause");
+    return 0;
+}
