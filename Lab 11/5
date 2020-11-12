@@ -1,0 +1,27 @@
+
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    int x;
+    cout << "Введите число: ";
+    cin >> x;
+    if (x > 0)
+        cout << "Положительное ";
+    else if (x < 0)
+        cout << "Отрицательное ";
+    else cout << "Нулевое ";
+    if (x != 0)
+    {
+        if (x % 2 == 1)
+            cout << "нечетное ";
+        else cout << "четное ";
+    }
+    cout << "число" << endl;
+    system("pause");
+    return 0;
+}
