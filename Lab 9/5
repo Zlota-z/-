@@ -1,0 +1,17 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    int c;
+    cout << "Введите номер года: ";
+    cin >> c;
+    if ((c % 100) == 0)
+        cout << "Номер столетия: " << c / 100 << endl;
+    else cout << "Номер столетия: " << c / 100 + 1 << endl;
+    system("pause");
+    return 0;
+}
