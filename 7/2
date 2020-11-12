@@ -1,0 +1,21 @@
+#include <iostream>
+#define _USE_MATH_DEFINES
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    double a;
+    cout << "a = ";
+    cin >> a;
+    if ((a >= 2*M_PI) | (a <= 0))
+        cout << "Некорректное значение!" << endl;
+    else
+    {
+        a = a / M_PI * 180;
+        cout << "a = " << a << endl;
+    }
+    return 0;
+}
