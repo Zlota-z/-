@@ -1,0 +1,30 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    double ax, ay, bx, by, cx, cy;
+    cout << "Введите координату по оси х для точки А: ";
+    cin >> ax;
+    cout << "Введите координату по оси y для точки А: ";
+    cin >> ay;
+    cout << "Введите координату по оси х для точки B: ";
+    cin >> bx;
+    cout << "Введите координату по оси y для точки B: ";
+    cin >> by;
+    cout << "Введите координату по оси х для точки C: ";
+    cin >> cx;
+    cout << "Введите координату по оси y для точки C: ";
+    cin >> cy;
+    bx = sqrt((ax - bx) * (ax - bx) + (ay - by) * (ay - by));
+    cx = sqrt((ax - cx) * (ax - cx) + (ay - cy) * (ay - cy));
+    if (bx > cx)
+        cout << "Расстояние от точки А до точки С = " << cx << endl;
+    else
+        cout << "Расстояние от точки А до точки B = " << bx << endl;
+    system("pause");
+    return 0;
+}
