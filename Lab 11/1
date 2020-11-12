@@ -1,0 +1,26 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    int a, b;
+    cout << "a = ";
+    cin >> a;
+    cout << "b = ";
+    cin >> b;
+    if (a == b)
+    {
+        a = 0;
+        b = 0;
+    }
+    else if (a > b)
+        b = a;
+    else a = b;
+    cout << "A = " << a << endl;
+    cout << "B = " << b << endl;
+    system("pause");
+    return 0;
+}
