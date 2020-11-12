@@ -1,0 +1,25 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    double a, x, y;
+    cout << "A = ";
+    cin >> a;
+    cout << "Y = ";
+    cin >> y;
+    cout << "X = ";
+    cin >> x;
+    if (x == 0)
+        cout << "Некорректное значение!" << endl;
+    else
+    {
+        a = a / x;
+        cout << "Цена за 1 кг: " << a << endl;
+        cout << "Цена за " << y << " кг: " << y * a << endl;
+    }
+    return 0;
+}
