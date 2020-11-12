@@ -1,0 +1,22 @@
+#include <iostream>
+
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    double v1, v2, s, t;
+    cout << "V1 = ";
+    cin >> v1;
+    cout << "V2 = ";
+    cin >> v2;
+    cout << "S = ";
+    cin >> s;
+    cout << "T = ";
+    cin >> t;
+        s = (v1 + v2) * t + s;
+        cout << "S = " << s << endl;
+    return 0;
+}
