@@ -1,0 +1,22 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    int a, b, c;
+    bool bo;
+    cout << "a = ";
+    cin >> a;
+    cout << "b = ";
+    cin >> b;
+    cout << "c = ";
+    cin >> c;
+    bo = ((a*a + b*b == c*c) | (a*a + c*c == b*b) | (b*b + c*c == a*a));
+    cout << bo << endl;
+    system("pause");
+    return 0;
+}
+ 
