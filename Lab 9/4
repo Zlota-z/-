@@ -1,0 +1,27 @@
+
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    int a, a1, b, b1, c;
+    cout << "A = ";
+    cin >> a;
+    cout << "B = ";
+    cin >> b;
+    cout << "C = ";
+    cin >> c;
+    a1 = 0;
+    b1 = 0;
+    a1 = a / c;
+    b1 = b / c;
+    c = a * b - a1 * b1 * c * c;
+    cout << "Максимальное количество квадратов: " << a1 * b1 << endl;
+    cout << "Площадь незанятой части прямоугольника: " << c << endl;
+    system("pause");
+    return 0;
+}
+ 
