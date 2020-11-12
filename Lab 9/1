@@ -1,0 +1,16 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    int x;
+    cout << "N = ";
+    cin >> x;
+    x %= 60;
+    cout << "Секунд с последней минуты прошло: " << x << endl;
+    system("pause");
+    return 0;
+}
