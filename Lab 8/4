@@ -1,0 +1,17 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    int A, B;
+    cout << "Введите двузначное число: ";
+    cin >> A;
+    B = A/10;
+    A %= 10;
+        cout << "Полученное число: " << A << B << endl;
+    system("pause");
+    return 0;
+}
