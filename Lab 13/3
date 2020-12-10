@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "Russian");
+	float N, s = 0;
+	cout << "N = ";
+	cin >> N;
+	for (int i = 1; i < (2 * N); i += 2)
+	{
+		s += i;
+		cout << s << endl;
+	}
+	return 0;
+}
