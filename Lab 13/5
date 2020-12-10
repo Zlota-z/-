@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "Russian");
+	double N, A, s = 1;
+	cout << "N = ";
+	cin >> N;
+	cout << "A = ";
+	cin >> A;
+	for (double Ap = A * (-1); abs(Ap) <= pow (A, N); Ap = Ap * A * (-1))
+	{
+	s = s + Ap;
+	}
+	cout << s << endl;
+	return 0;
+}
