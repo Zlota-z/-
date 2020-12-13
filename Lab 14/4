@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "Russian");
+	double P, K, S = 1000;
+	cout << "P = ";
+	cin >> P;
+	for (K = 0; S <= 1100; K++)
+		S = S*(1+P/100);
+	cout << "K = " << K << endl;
+	cout << "S = " << S << endl;
+	return 0;
+}
