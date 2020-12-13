@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "Russian");
+	int N;
+	double s;
+	cout << "N = ";
+	cin >> N;
+	double* A = new double[N];
+	for (int i = 0; i < N; i++)
+		cin >> A[i];
+	for (int i = 0; i < N - 1; i++)
+		if (A[i] > A[i + 1])
+		{
+			s = A[i];
+			A[i] = A[i + 1];
+			A[i + 1] = s;
+		}
+	for (int i = 0; i < N; i++)
+		cout << A[i] << endl;
+	delete[] A;
+	return 0;
+}
