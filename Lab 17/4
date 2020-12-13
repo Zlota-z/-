@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "Russian");
+	int N, max = 0;
+	cout << "N = ";
+	cin >> N;
+	double* A = new double[N];
+	for (int i = 0; i < N; i++)
+		cin >> A[i];
+	for (int i = 1; i < (N-1); i ++)
+		if ((A[i-1] < A[i]) && (A[i + 1] < A[i]))
+			max = i;
+	if (A[N - 1] > A[N - 2])
+		max = N - 1;
+	cout << max << endl;
+	delete[] A;
+	return 0;
+}
