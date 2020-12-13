@@ -1,0 +1,37 @@
+
+#include <iostream>
+using namespace std;
+double PI = 3.1415926535;
+
+int Quarter(double x, double y)
+{
+	if (x > 0)
+	{
+		if (y > 0)
+			return 1;
+		else
+			return 4;
+	}
+	else
+	{
+		if (y > 0)
+			return 2;
+		else
+			return 3;
+	}
+}
+
+int main() {
+	setlocale(LC_ALL, "Russian");
+	double X, Y;
+	for (int i = 1; i < 4; i++)
+	{
+		cout << "Введите координату х точки " << i << ": ";
+		cin >> X;
+		cout << "Введите координату y точки " << i << ": ";
+		cin >> Y;
+		cout << "Точка " << i << " находится в четверти " << Quarter(X, Y) << endl;
+	}
+
+	return 0;
+}
