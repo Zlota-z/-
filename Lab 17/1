@@ -1,0 +1,25 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "Russian");
+	int N, L, K, s = 0;
+	cout << "N = ";
+	cin >> N;
+	cout << "L = ";
+	cin >> L;
+	L--;
+	cout << "K = ";
+	cin >> K;
+	K--;
+	double* A = new double[N];
+	for (int i = 0; i < N; i++)
+		cin >> A[i];
+	for (int i = K; i <= L; i ++)
+		s += A[i];
+	s = s / (L - K + 1);
+	cout << s << endl;
+	delete[] A;
+	return 0;
+}
