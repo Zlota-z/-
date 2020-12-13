@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+double PI = 3.1415926535;
+
+double RingS (double R1, double R2)
+{
+		return PI * R1 * R1 - PI * R2 * R2;
+}
+
+int main() {
+	setlocale(LC_ALL, "Russian");
+	double A, B;
+	for (int i = 1; i < 4; i++)
+	{
+		cout << "Введите больший радиус: ";
+		cin >> A;
+		cout << "Введите меньший радиус: ";
+		cin >> B;
+		cout << "Площадь кольца равна " << RingS(A, B) << endl;
+	}
+
+	return 0;
+}
