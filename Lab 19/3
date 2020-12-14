@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+void FillArray(double* const arr, const int size){
+	for (int i = 0; i < size; i++)
+		cin >> arr[i];
+}
+void ShowArray(const double* const arr, const int size){
+	cout << "---" << endl;
+	for (int i = 0; i < size; i++)
+		cout << arr[i] << endl;
+}
+void PutZeroValueMax(double*& arr, int& size, int count){
+	size++;
+	double* NewArr = new double[size];
+	int i = 0;
+	for (; i <= count; i++)
+		NewArr[i] = arr[i];
+	NewArr[i] = 0;
+	i++;
+	for (; i < size; i++)
+		NewArr[i] = arr[i-1];
+	delete[] arr;
+	arr = NewArr;
+}
+void PutZeroValueMin(double*& arr, int& size, int count){
+	size++;
+	double* NewArr = new double[size];
+	int i = 0;
+	for (; i < count; i++)
+		NewArr[i] = arr[i];
+	NewArr[i] = 0;
+	i++;
+	for (; i < size; i++)
+		NewArr[i] = arr[i - 1];
+	delete[] arr;
+	arr = NewArr;
+}
+int main() {
+	setlocale(LC_ALL, "Russian");
+	int N, min = 0, max= 0;
+	cout << "N = ";
+	cin >> N;
+	double* A = new double[N];
+	FillArray(A, N);
+	for (int i = 0; i < N; i++){
+		if (A[i] > A[max])
+			max = i;
+		if (A[i] < A[min])
+			min = i;
+	}
+	if (min > max)
+		min++;
+	PutZeroValueMax(A, N, max);
+	PutZeroValueMin(A, N, min);
+	ShowArray(A, N);
+	delete[] A;
+	return 0;
+}
