@@ -1,0 +1,55 @@
+#include <iostream>
+using namespace std;
+
+void FillArray(double* const arr, const int size) {
+	for (int i = 0; i < size; i++)
+		cin >> arr[i];
+}
+
+void ShowArray(const double* const arr, const int size) {
+	cout << "---" << endl;
+	for (int i = 0; i < size; i++)
+		cout << arr[i] << endl;
+}
+
+void ChangeArray(double*& arr, int& size, int count1, int count2) {
+	size -= 2;
+	double* NewArr = new double[size];
+	for (int i = 0; i < count1; i++)
+		NewArr[i] = arr[i];
+	for (int i = count1; i < count2 - 1; i++)
+		NewArr[i] = arr[i + 1];
+	for (int i = count2 - 1; i <= size; i++)
+		NewArr[i] = arr[i + 2];
+	delete[] arr;
+	arr = NewArr;
+}
+
+int main() {
+	setlocale(LC_ALL, "Russian");
+	int N, s;
+	cout << "N = ";
+	cin >> N;
+	double* A = new double[N];
+	FillArray(A, N);
+	for (int i = 0; i < N - 1; i++) {
+		s = 0;
+		for (int j = i + 1; ((j < N) && (s == 0)); j++) {
+			if (A[i] == A[j]) {
+				for (int k = 0; k < N; k++) {
+					if ((A[i] == A[k]) && (k != i) && (k != j))
+						s = 1;
+				}
+				if (s == 0) {
+					ChangeArray(A, N, i, j);
+					i = -1;
+					s = 1;
+				}
+			}
+		}
+
+	}
+	ShowArray(A, N);
+	delete[] A;
+	return 0;
+}
